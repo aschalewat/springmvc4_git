@@ -28,15 +28,15 @@ currentBuild.result = 'SUCCESS'
                 error()
             }
         }
-        stage('Package') {
+       /* stage('Package') {
             try {
-                archiveArtifacts artifacts: '**/springMVC4-0.1.0-vanilla-SNAPSHOT.war',
+                archiveArtifacts artifacts: '**//*springMVC4-0.1.0-vanilla-SNAPSHOT.war',
                         fingerprint: true
             } catch (error) {
                 echo "${error}"
                 error()
             }
-        }
+        }*/
         stage('Unit Testing') {
             try {
                 timeout(5) {
