@@ -22,7 +22,7 @@ currentBuild.result = 'SUCCESS'
         stage('Install + Build') {
             try {
                 echo "Building"
-                sh "${mvnHome}/bin/mvn -Pall clean install -f ./pom.xml"
+                sh "${mvnHome}/bin/mvn  clean install -f ./pom.xml"
             } catch (error) {
                 echo "${error}"
                 error()
