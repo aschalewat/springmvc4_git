@@ -8,11 +8,7 @@
     <name>SpringMVC Maven Webapp</name>
     <url>http://maven.apache.org</url>
  
-    <properties>
-        <java-version>1.7</java-version>
-        <org.springframework-version>4.2.6.RELEASE</org.springframework-version>
-    </properties>
- 
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -103,6 +99,8 @@
     </dependencies>
 
     <properties>
+        <java-version>1.7</java-version>
+        <org.springframework-version>4.2.6.RELEASE</org.springframework-version>
         <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
         <sonar.language>java</sonar.language>
