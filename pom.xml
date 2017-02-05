@@ -103,7 +103,7 @@
         </dependency>
 
         <dependency>
-            <groupId>org.sonarsource.jav</groupId>
+            <groupId>org.sonarsource.java</groupId>
             <artifactId>sonar-jacoco-listeners</artifactId>
             <version>3.10</version>
             <scope>test</scope>
