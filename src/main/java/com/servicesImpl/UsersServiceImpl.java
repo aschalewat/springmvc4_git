@@ -26,5 +26,9 @@ public class UsersServiceImpl implements UsersService {
         // TODO Auto-generated method stub
         return userDao.delete(users);
     }
+
+    public void setUserDao(UsersDao userDao) {
+        this.userDao = userDao;
+    }
  
 }
