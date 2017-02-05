@@ -101,11 +101,18 @@
             <artifactId>hibernate-jpa-2.0-api</artifactId>
             <version>1.0.0.Final</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.sonarsource.jav</groupId>
+            <artifactId>sonar-jacoco-listeners</artifactId>
+            <version>3.10</version>
+            <scope>test</scope>
+        </dependency>
  
     </dependencies>
 
     <properties>
-        <java-version>1.7</java-version>
+        <java-version>1.8</java-version>
         <org.springframework-version>4.2.6.RELEASE</org.springframework-version>
         <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
