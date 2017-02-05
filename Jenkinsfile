@@ -22,7 +22,7 @@ currentBuild.result = 'SUCCESS'
         stage('Install + Build') {
             try {
                 echo "Building"
-                sh "${mvnHome}/bin/mvn -Pall clean install -f /pom.xml"
+                sh "${mvnHome}/bin/mvn -Pall clean install -f ./pom.xml"
             } catch (error) {
                 echo "${error}"
                 error()
@@ -42,7 +42,7 @@ currentBuild.result = 'SUCCESS'
                 timeout(5) {
                     withSonarQubeEnv('Sonar') {
                         sh "${mvnHome}/bin/mvn org.jacoco:jacoco-maven-plugin:0.7.8:prepare-agent verify -Dno-deploy -f ./SpringMVC4_Git/pom.xml"
-                        sh "${mvnHome}/bin/mvn sonar:sonar -Pno-deploy -f /pom.xml"
+                        sh "${mvnHome}/bin/mvn sonar:sonar -Pno-deploy -f ./pom.xml"
                     }
                 }
             } catch (error) {
