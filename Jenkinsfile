@@ -41,8 +41,8 @@ currentBuild.result = 'SUCCESS'
             try {
                 timeout(5) {
                     withSonarQubeEnv('Sonar') {
-                        sh "${mvnHome}/bin/mvn org.jacoco:jacoco-maven-plugin:0.7.8:prepare-agent verify -Dno-deploy -f ./SpringMVC4_Git/pom.xml"
-                       // sh "${mvnHome}/bin/mvn sonar:sonar -Pno-deploy -f ./pom.xml"
+                        //sh "${mvnHome}/bin/mvn org.jacoco:jacoco-maven-plugin:0.7.8:prepare-agent verify -Dno-deploy -f ./SpringMVC4_Git/pom.xml"
+                        sh "${mvnHome}/bin/mvn sonar:sonar -Pno-deploy -f ./pom.xml"
                     }
                 }
             } catch (error) {
