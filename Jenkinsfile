@@ -28,7 +28,7 @@ currentBuild.result = 'SUCCESS'
                 error()
             }
         }
-        stage('Package') {
+        /*stage('Package') {
             try {
                 archiveArtifacts artifacts: '*SpringMVC4-0.0.1-SNAPSHOT.war',
                         fingerprint: true
@@ -36,13 +36,13 @@ currentBuild.result = 'SUCCESS'
                 echo "${error}"
                 error()
             }
-        }
+        }*/
         stage('Unit Testing') {
             try {
                 timeout(5) {
                     withSonarQubeEnv('Sonar') {
                         sh "${mvnHome}/bin/mvn org.jacoco:jacoco-maven-plugin:0.7.8:prepare-agent verify -Dno-deploy -f ./SpringMVC4_Git/pom.xml"
-                        sh "${mvnHome}/bin/mvn sonar:sonar -Pno-deploy -f ./pom.xml"
+                       // sh "${mvnHome}/bin/mvn sonar:sonar -Pno-deploy -f ./pom.xml"
                     }
                 }
             } catch (error) {
