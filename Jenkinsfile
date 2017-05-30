@@ -19,7 +19,7 @@ currentBuild.result = 'SUCCESS'
             checkout scm
         }
 
-        stage('Install + Build.') {
+        stage('Install + Build..') {
             try {
                 echo "Building"
                 sh "${mvnHome}/bin/mvn  clean install -f ./pom.xml"
