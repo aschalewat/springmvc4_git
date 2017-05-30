@@ -28,7 +28,7 @@ currentBuild.result = 'SUCCESS'
                 error()
             }
         }
-        stage('Package') {
+        /*stage('Package') {
             try {
                 archiveArtifacts artifacts: '*springMVC4-0.1.0-vanilla-SNAPSHOT.war',
                         fingerprint: true
@@ -36,7 +36,7 @@ currentBuild.result = 'SUCCESS'
                 echo "${error}"
                 error()
             }
-        }
+        }*/
         stage('Unit Testing') {
             try {
                 timeout(5) {
