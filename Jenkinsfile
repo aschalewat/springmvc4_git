@@ -37,7 +37,7 @@ currentBuild.result = 'SUCCESS'
                 error()
             }
         }*/
-        stage('Unit Testing') {
+        /*stage('Unit Testing') {
             try {
                 timeout(5) {
                     withSonarQubeEnv('Sonar') {
@@ -49,7 +49,7 @@ currentBuild.result = 'SUCCESS'
                 echo "${error}"
                 error()
             }
-        }
+        }*/
       /*  def qualityMetrics = ""
         //Quality Metric Stages
         stage('Automated Code Analysis') {
