@@ -53,7 +53,7 @@ currentBuild.result = 'SUCCESS'
       /*  def qualityMetrics = ""
         //Quality Metric Stages
         stage('Automated Code Analysis') {
-            def reportPage = sh ( script: "curl 'http://sonarqube.amelco.co.uk/api/measures/component?additionalFields=metrics%2Cperiods&componentKey=ats-hkjc%3Aats-hkjc-master&metricKeys=alert_status%2Cquality_gate_details%2Cbugs%2Cnew_bugs%2Creliability_rating%2Cvulnerabilities%2Cnew_vulnerabilities%2Csecurity_rating%2Ccode_smells%2Cnew_code_smells%2Csqale_rating%2Csqale_index%2Cnew_technical_debt%2Ccoverage%2Cnew_coverage%2Cnew_lines_to_cover%2Ctests%2Cduplicated_lines_density%2Cnew_duplicated_lines_density%2Cduplicated_blocks%2Cncloc%2Cncloc_language_distribution%2Cnew_lines' > qualityInfo.json",
+            def reportPage = sh ( script: "curl 'http://192.168.1.8:9000/api/measures/component?additionalFields=metrics%2Cperiods&componentKey=ats-hkjc%3Aats-hkjc-master&metricKeys=alert_status%2Cquality_gate_details%2Cbugs%2Cnew_bugs%2Creliability_rating%2Cvulnerabilities%2Cnew_vulnerabilities%2Csecurity_rating%2Ccode_smells%2Cnew_code_smells%2Csqale_rating%2Csqale_index%2Cnew_technical_debt%2Ccoverage%2Cnew_coverage%2Cnew_lines_to_cover%2Ctests%2Cduplicated_lines_density%2Cnew_duplicated_lines_density%2Cduplicated_blocks%2Cncloc%2Cncloc_language_distribution%2Cnew_lines' > qualityInfo.json",
                     returnStdout: true )
             qualityMetrics = sh (script: "jq -r '.component.measures[] | select(.metric==\"quality_gate_details\").value | fromjson.conditions[] | select(.metric) | \"->\" + .metric + \": \" + .actual + \" / \" + .error + \" = \" + .level' qualityInfo.json", returnStdout: true )
             echo "Quality Gate Metrics: \n" + qualityMetrics

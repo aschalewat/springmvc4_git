@@ -117,7 +117,7 @@
         <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
         <sonar.language>java</sonar.language>
-        <sonar.host.url>http://192.168.1.7</sonar.host.url>
+        <sonar.host.url>http://192.168.1.8</sonar.host.url>
         <sonar.login>admin</sonar.login>
         <sonar.password>admin</sonar.password>
         <sonar.jdbc.url>jdbc:mysql://192.168.1.7:3306/sonar</sonar.jdbc.url>
